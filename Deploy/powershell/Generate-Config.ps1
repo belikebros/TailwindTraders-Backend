@@ -108,8 +108,8 @@ if($ingressClass -eq "nginx") {
 Write-Host ($tokens | ConvertTo-Json) -ForegroundColor Yellow
 Write-Host "===========================================================" -ForegroundColor Yellow
 
-Push-Location $($MyInvocation.InvocationName | Split-Path)
-$gvaluesTemplatePath=$(./Join-Path-Recursively -pathParts $gvaluesTemplate.Split(","))
-$outputFilePath=$(./Join-Path-Recursively -pathParts $outputFile.Split(","))
-& ./Token-Replace.ps1 -inputFile $gvaluesTemplatePath -outputFile $outputFilePath -tokens $tokens
-Pop-Location
+#Push-Location $($MyInvocation.InvocationName | Split-Path)
+#$gvaluesTemplatePath=$(./Join-Path-Recursively -pathParts $gvaluesTemplate.Split(","))
+#$outputFilePath=$(./Join-Path-Recursively -pathParts $outputFile.Split(","))
+#& ./Token-Replace.ps1 -inputFile $gvaluesTemplatePath -outputFile $outputFilePath -tokens $tokens
+#Pop-Location
